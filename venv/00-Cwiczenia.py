@@ -338,6 +338,43 @@
 # print(playerTwoCards)
 #
 # --------------------------------------
+# ***Gra która imituje 5 ruchów w kturych można znaleźć skrzykę ze złotem***
+# import random
+# chanseChest = ["Chest","Nothing"]
+# colorOfChest = ["Green","Orange","Purple","Gold"]
+# gameLenght = 5
+# gold = 0
+# choseDirection = 0
+#
+# print("Welcome in my game, You be serch a chest with gold. You have only 5 steps \n")
+#
+#
+#
+# for move in range(gameLenght):
+#     playerChose = input("Chose the direction [forward, left, right, back] : ")
+#     steps = random.choices(chanseChest, [6, 4], k=1)
+#     step = str(steps.pop())
+#     if step == "Chest":
+#         colorChests = random.choices(colorOfChest, [75,20,4,1] , k=100)
+#         colorChest = str(colorChests.pop())
+#         if colorChest == "Green":
+#             print("Move : [",move+1,"] You found the chest!! - Its green chest, You get 1000 gold")
+#             gold += 1000
+#         elif colorChest == "Orange":
+#             print("Move : [",move+1,"] You found the chest!! - Its orange chest, You get 4000 gold")
+#             gold += 4000
+#         elif colorChest == "Purple":
+#             print("Move : [",move+1,"] You found the chest!! - Its purple chest, You get 9000 gold")
+#             gold += 9000
+#         elif colorChest == "Gold":
+#             print("Move : [", move+1,"] You found the chest!! - Its gold chest, You get 16000 gold")
+#             gold += 16000
+#     else:
+#         print("Move : [",move + 1 ,"] There is nothing here")
+#
+# print("\nYou have :", gold , "in your pocket")
+
+
 
 
 
