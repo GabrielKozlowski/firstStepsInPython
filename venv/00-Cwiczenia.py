@@ -373,9 +373,67 @@
 #         print("Move : [",move + 1 ,"] There is nothing here")
 #
 # print("\nYou have :", gold , "in your pocket")
-
-
-
+#------------------------------------------------------------------
+#***Bardziej zaawansowany code do tej samej gry***
+#
+# import random
+# from enum import Enum
+#
+# Event = Enum('Event', ['Chest','Nothing'])
+#
+# eventDictionary = {
+#                     Event.Chest: 0.6,
+#                     Event.Nothing: 0.4
+#                   }
+#
+# eventList = list(eventDictionary.keys())
+# evenProbability = list(eventDictionary.values())
+# Colours = Enum('Colours', {'Green' : 'green',
+#                            'Orange' : 'orange',
+#                            'Purple' : 'purple',
+#                            'Gold' : 'gold'
+#                            }
+#                )
+# chestColoursDictionary = {
+#                Colours.Green: 0.75,
+#                Colours.Orange: 0.20,
+#                Colours.Purple: 0.04,
+#                Colours.Gold: 0.01
+#                           }
+#
+# chestColourList = list(chestColoursDictionary.keys())
+# chestColourProbability = list(chestColoursDictionary.values())
+# rewardsForChests = {
+#                     chestColourList[reward]: (reward + 1) * (reward +1) * 1000
+#                     for reward in range(len(chestColourList))
+# }
+# gameLenght = 5
+# goldAcquired = 0
+# print("""Welome in my game
+# You have only 5 steps to make,
+# see yourself haw mach gold you gonna acquire till the end!""")
+#
+#
+# while gameLenght > 0:
+#     gamerAnswer = input("Do you want move? : ")
+#     if gamerAnswer == 'yes':
+#         print("Great, let's see what you got ...")
+#         drawnEvent = random.choices(eventList,evenProbability)[0]
+#         if drawnEvent == Event.Chest:
+#             drawnColour = random.choices(chestColourList,chestColourProbability)[0]
+#             print("Nice, you find a ",drawnColour.value," chest")
+#             gamerReward = rewardsForChests[drawnColour]
+#             goldAcquired = goldAcquired + gamerReward
+#         elif drawnEvent == Event.Nothing:
+#             print("Nothing in here.")
+#     else:
+#         print("If you wanna play, you must write yes")
+#         continue
+#     gameLenght = gameLenght - 1
+#
+# print("Congratulation, you have acquired : ",goldAcquired)
+# ----------------------------------------------------------------------
+#
 
 
 
