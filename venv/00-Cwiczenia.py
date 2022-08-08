@@ -314,4 +314,37 @@
 #
 # ----------------------------------------------------
 
+# # *** Losowanie randomowych pieciu kart do gry w wojnę ***
+# import random
+# cardList = ['9(♣)','9(♦)','9(♥)','9(♠)',
+#             '10(♣)','10(♦)','10(♥)','10(♠)',
+#             'J(♣)','J(♦)','J(♥)','J(♠)',
+#             'Q(♣)','Q(♦)','Q(♥)','Q(♠)',
+#             'K(♣)','K(♦)','K(♥)','K(♠)',
+#             'A(♣)','A(♦)','A(♥)','A(♠)']
+#
+#
+# random.shuffle(cardList)
+# playerOneCards = []
+# playerTwoCards = []
+#
+# for i in range(5):
+#     a = cardList.pop()
+#     b = cardList.pop()
+#     playerOneCards.append(a)
+#     playerTwoCards.append(b)
+#
+# print(playerOneCards)
+# print(playerTwoCards)
+#
+# --------------------------------------
+
+
+
+
+
+
+
+
+
 
