@@ -1,4 +1,4 @@
-# Program do zapisywania definicji do kluczy w słownik
+# ***Program do zapisywania definicji do kluczy w słownik***
 
 # definicje = {}
 #
@@ -64,7 +64,7 @@
 #     if element %  2 == 0:
 #         liczbyParzyste.append(element)
 #
-# # wzrażenie listowe przyspiesza pętle i jest ładniejsze i krótsze
+# ***wyrażenie listowe przyspiesza pętle i jest ładniejsze i krótsze***
 # potegiDwojki2 = [element**2
 #                  for element in liczby
 #                 ]
@@ -80,7 +80,7 @@
 #print(liczbyParzyste)
 #print(liczbyParzyste2)
 #--------------------------------------------------------------------------------------
-#Wrażenia generowane, generują dane nie zapisując ich i nie obciążając pamięci
+#***Wyrażenia generowane, generują dane nie zapisując ich i nie obciążając pamięci***
 #
 # import sys
 # evenNumbers = [element
@@ -104,7 +104,7 @@
 #---------------------------------------------------------------------------
 
 
-#Generator
+#***Generator***
 #
 # liczby = (
 #     liczba
@@ -129,7 +129,7 @@
 # print(liczby)
 #---------------------------------------------------------------------------
 
-#Program do obliczania pola figur
+#***Program do obliczania pola figur***
 
 # import figury
 #
@@ -295,7 +295,7 @@
 # print(testCzasuFunkcji(liczenieSumy1000liczb2,10000))
 #
 # ------------------------------------------------------------
-# Randomowe losowanie liczb lotto
+# ***Randomowe losowanie liczb lotto***
 # import random
 #
 # lotteryNumbers = []
