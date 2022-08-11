@@ -19,4 +19,3 @@ file.close()
 
 with open("oceany.txt", "r") as file:
     oceany = file.read()
-    print(oceany)
