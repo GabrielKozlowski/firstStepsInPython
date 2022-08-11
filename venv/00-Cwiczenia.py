@@ -458,12 +458,28 @@
 #     print(file.read())
 # with open("nazwiska.txt","r",encoding="UTF-8") as file:
 #     print(file.read())
+#
+#
 
-
-
-
-
-
+#
+# def openFileFunkcion():
+#     inputNameFile = input("Please write a name of file with you wanna read : ")
+#     try:
+#         with open(inputNameFile,"r",encoding="UTF-8") as file:
+#             inputNameFile = file.read()
+#             print(inputNameFile)
+#
+#     except FileNotFoundError:
+#         print("File not existed")
+#---------------------------------------------------------------
+# from funkcja_otwierajaca_pliki import read_content_of_file
+#
+# read_content_of_file
+# ===========================================================
+# from defOpenFile import openFileFunkcion
+#
+# openFileFunkcion
+# ------------------------------------------------------------------
 
 
 
