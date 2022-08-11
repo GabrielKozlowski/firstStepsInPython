@@ -19,3 +19,8 @@ file.close()
 
 with open("oceany.txt", "r") as file:
     oceany = file.read()
+Spokojny
+Atlantycki
+Indyjski
+Arktyczny
+Południowy
