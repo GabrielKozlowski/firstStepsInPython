@@ -16,3 +16,7 @@ file = open("testt.txt", "w") # UCHWYT - HANDLE
 file.write("simple ")
 file.write("simple")
 file.close()
+
+with open("oceany.txt", "r") as file:
+    oceany = file.read()
+    print(oceany)
