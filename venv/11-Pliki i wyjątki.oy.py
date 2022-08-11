@@ -15,3 +15,4 @@ plik w odpowiedni dla tych programów sposób
 file = open("testt.txt", "w") # UCHWYT - HANDLE
 file.write("simple ")
 file.write("simple")
+file.close()
