@@ -1,18 +1,19 @@
-#len() - długość
-#.append() - dodać jeden element
-#.extend() - rozszerzyć o elementy
-#.insert(index,co) - wstawić element na dane miejsce
-#.index() - indeks danego elementu
-#sort(reverse=false) - sortowanie rosnąco
-#max() - podaj największy element
-#min() - podaj najmniejszy element
-#.count() - podaj ile razy coś występuje w liście
-#.pop() - usuń ostatni element z listy
-#.remove() - usuń pierwszy element z listy
-#.clear() - wyczyść listę
-#.reverse() - odwróć kolejność
-##
-
+# '''
+# len() - długość
+# .append() - dodać jeden element
+# .extend() - rozszerzyć o elementy
+# .insert(index,co) - wstawić element na dane miejsce
+# .index() - indeks danego elementu
+# sort(reverse=false) - sortowanie rosnąco
+# max() - podaj największy element
+# min() - podaj najmniejszy element
+# .count() - podaj ile razy coś występuje w liście
+# .pop() - usuń ostatni element z listy
+# .remove() - usuń pierwszy element z listy
+# .clear() - wyczyść listę
+# .reverse() - odwróć kolejność
+#
+# '''
 
 
 imiona = []
