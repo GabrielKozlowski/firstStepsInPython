@@ -498,18 +498,58 @@
 # pp = pprint.PrettyPrinter(depth=6)
 # pp.pprint(tup)
 #
+#--------------------------------------------------------------
+# ***Wyświetlenie największej wartości ze strony na której jest słownik z kluczami i wartościami w json***
+# import requests
+# import json
+# """
+# {
+#  1:11
+#  2:6
+#  3:4
+# }
+# """
 #
-import requests
-import json
+#
+# r = requests.get("https://jsonplaceholder.typicode.com/todos")  ### Strona z zawodnikami i zadniami
+#
+# def count_task_frequency(tasks):                          ### Funkcja do wyłapania zaliczonych zadań i przypisania
+#     completedTaskFrequencyByUser = dict()                 ### ilosci do użytkownikó
+#     for entry in tasks:                                              ### pętla dla wejść w zadania
+#         if (entry["completed"] == True):                             ### odniesienie się do value "completed"
+#             try:                                                  ### próba do wyciągnięcia błędu dodania do niczego
+#                 completedTaskFrequencyByUser[entry["userId"]] += 1
+#             except KeyError:
+#                 completedTaskFrequencyByUser[entry["userId"]] = 1
+#
+#     return completedTaskFrequencyByUser                            ### zwraca listę w której są dodane Keys
+#                                                                    ### z wartościami i spełniające if
+#
+# def get_users_with_top_completed_tasks(completedTaskFrequencyByUser): ### funkcja wybiera użytkownika z największą
+#     userIdWithMaxCompletedAmoundTasks = []                            ### ilością zrobionych zadań
+#     maxAmoundOfCompletedTask = max(completedTaskFrequencyByUser.values())  ### przypisanie do zmiennej
+#     for userId, numberOfCompletedTsks in completedTaskFrequencyByUser.items():
+#         if (numberOfCompletedTsks == maxAmoundOfCompletedTask):
+#             userIdWithMaxCompletedAmoundTasks.append(userId)
+#
+#     return userIdWithMaxCompletedAmoundTasks
+#
+#
+# try:
+#     tasks = r.json()
+# except json.decoder.JSONDecodeError:
+#     print("Niepoprawny format")
+# else:
+#     completedTaskFrequencyByUser = count_task_frequency(tasks)
+#     usersWithTopCompletedTasks = get_users_with_top_completed_tasks(completedTaskFrequencyByUser)
+#     print("Wręczamy ciasteczko mistrzunia dyscypliny do użytkowników o id: ", usersWithTopCompletedTasks)
+# -----------------------------------------------------------------
+# ***zainportowanie funkcji z pliku i odtworzenie zadania powyżej***
+# from functions import get_keys_with_top_values
+#
+# get_keys_with_top_values(completedTaskFrequencyByUser)
+# -----------------------------------------------------------
 
-r = requests.get("https://jsonplaceholder.typicode.com/todos")
 
 
-#tasks = json.loads(r.text)
-try:
-    tasks = r.json()
-except json.decoder.JSONDecodeError:
-    print("Niepoprawny format")
-else:
-    for entry in tasks:
-        print(entry)
+
