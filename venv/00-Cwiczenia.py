@@ -549,6 +549,47 @@
 #
 # get_keys_with_top_values(completedTaskFrequencyByUser)
 # -----------------------------------------------------------
+#
+# import requests
+# import json
+#
+#
+#
+# def count_completed_tasks(tasks):
+#     tasksCompleted = dict()
+#     for entry in tasks:
+#         if (entry["completed"] == True):
+#             try:
+#                 tasksCompleted[entry["userId"]] += 1
+#             except KeyError:
+#                 tasksCompleted[entry["userId"]] = 1
+#     return tasksCompleted
+#
+# def user_with_top_completed_tasks(tasksCompleted):
+#     maxCompletedTasks = max(tasksCompleted.values())
+#     topScoreUserId = []
+#     for userId, score in tasksCompleted.items():
+#         if score == maxCompletedTasks:
+#             topScoreUserId.append(userId)
+#     return topScoreUserId
+#
+#
+#
+#
+#
+# webSite = requests.get("https://jsonplaceholder.typicode.com/todos")
+#
+# try:
+#     tasks = webSite.json()
+# except json.decoder.JSONDecodeError:
+#     print("Niepoprawny format")
+# else:
+#     tasksCompleted = count_completed_tasks(tasks)
+#     topScoreUserId = user_with_top_completed_tasks(tasksCompleted)
+#     print("Najlepsi uźytkownicy to :", topScoreUserId)
+
+
+
 
 
 
