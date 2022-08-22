@@ -587,6 +587,39 @@
 #     tasksCompleted = count_completed_tasks(tasks)
 #     topScoreUserId = user_with_top_completed_tasks(tasksCompleted)
 #     print("Najlepsi uźytkownicy to :", topScoreUserId)
+#------------------------------------------------------------------------------------
+
+
+def multiplication_numbers_by_itself():
+    number = 0
+    while True:
+        number += 1
+        sumOfMultiplication = (number * number)
+        yield sumOfMultiplication
+
+multipliedNumbers = multiplication_numbers_by_itself()
+
+def repeat_20_times():
+    numbers = []
+    for i in range(20):
+        number = next(multipliedNumbers)
+        numbers.append(number)
+    text ="Super teraz poczytam książkę"
+    numbers.append(text)
+    return numbers
+
+
+def repeat_30_times():
+    numbers = []
+    for i in range(30):
+        number = next(multipliedNumbers)
+        numbers.append(number)
+    return numbers
+
+listOfGeneratedNumbers = repeat_20_times() + repeat_30_times()
+
+print(listOfGeneratedNumbers)
+
 
 
 
