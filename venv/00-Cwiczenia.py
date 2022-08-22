@@ -26,11 +26,11 @@
 #             print(definicje[klucz])
 #         else:
 #             print("Nie znaleźiono definicji o nazwie [ ", klucz," ]")
-
-
-
-
-
+#
+#
+#
+#
+#
 #     elif chose == '3':
 #         klucz = input("Podaj nazwę definicji do usunięcia : ")
 #         if klucz in definicje:
@@ -38,11 +38,11 @@
 #             print("Usunięto definicję ", klucz)
 #         else:
 #             print("Nie znaleziono definicji o nazwie [ ",klucz," ]")
-
-
+#
+#
 #     elif chose == '4':
 #         break
-
+#
 #     else:
 #         print("Podaj odpowiedni numerek")
 #     print()
@@ -648,10 +648,4 @@
 
 # print(generatedNumbers)
 
-
-
-
-
-
-
-
+print("sdsdsds")
