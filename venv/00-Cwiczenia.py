@@ -588,42 +588,63 @@
 #     topScoreUserId = user_with_top_completed_tasks(tasksCompleted)
 #     print("Najlepsi uźytkownicy to :", topScoreUserId)
 #------------------------------------------------------------------------------------
-
-
-def multiplication_numbers_by_itself():
-    number = 0
-    while True:
-        number += 1
-        sumOfMultiplication = (number * number)
-        yield sumOfMultiplication
-
-multipliedNumbers = multiplication_numbers_by_itself()
-
-def repeat_20_times():
-    numbers = []
-    for i in range(20):
-        number = next(multipliedNumbers)
-        numbers.append(number)
-    text ="Super teraz poczytam książkę"
-    numbers.append(text)
-    return numbers
-
-
-def repeat_30_times():
-    numbers = []
-    for i in range(30):
-        number = next(multipliedNumbers)
-        numbers.append(number)
-    return numbers
-
-listOfGeneratedNumbers = repeat_20_times() + repeat_30_times()
-
-print(listOfGeneratedNumbers)
-
-
-
-
-
-
-
-
+##***Tworzenie generatora z funkcji metodą Yield i wywoływanie jej komendą next()***
+#
+# def number_multiplied_by_itself_generator():
+#     number = 0
+#     while True:
+#         number += 1
+#         sumOfMultiplication = (number * number)
+#         yield sumOfMultiplication
+#
+# multipliedNumbers = number_multiplied_by_itself_generator()
+#
+# def repeat_20_times():
+#     numbers = []
+#     for _ in range(20):
+#         number = next(multipliedNumbers)
+#         numbers.append(number)
+#     text ="Super teraz poczytam książkę"
+#     numbers.append(text)
+#     return numbers
+#
+#
+# def repeat_30_times():
+#     numbers = []
+#     for _ in range(30):
+#         number = next(multipliedNumbers)
+#         numbers.append(number)
+#     return numbers
+#
+# listOfGeneratedNumbers = repeat_20_times() + repeat_30_times()
+#
+# print(listOfGeneratedNumbers)
+#
+# --------------------------------------------------------------------------------
+#
+#
+# ##***Wysyłanie wartości do generatora , wstawiamy w linie z Yield !***
+#
+# def number_multiplied_by_itself_generator():
+#     number = 0
+#     while True:
+#         print("Start number", number)
+#         number = yield number * number
+#         print("Po yield number", number)
+#
+#
+# generatedNumbers = []
+#
+# numberGenerator = number_multiplied_by_itself_generator()
+#
+# numberGenerator.send(None)
+#
+# for i in range(0,20):
+#     generatedNumbers.append(numberGenerator.send(i))
+#
+# print(generatedNumbers)
+#
+# for i in range(20,50):
+#     generatedNumbers.append(numberGenerator.send(i))
+#
+# print(generatedNumbers)
