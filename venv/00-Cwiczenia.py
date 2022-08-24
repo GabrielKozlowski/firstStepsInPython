@@ -48,7 +48,6 @@
 #     print()
 
 
-
 # print("Koniec Programu")
 # #------------------------------------------------------------------------------------
 
@@ -115,7 +114,6 @@
 #     print(liczba)
 
 
-
 # #Listowy
 
 # liczby = [
@@ -143,7 +141,6 @@
 # 5- Koło
 # 6- Koniec
 # '''
-
 
 
 # while True:
@@ -187,8 +184,6 @@
 #     return sum
 
 
-
-
 # setContener1 = {i for i in range(1000)}
 # listContener1 = [i for i in range(1000)]
 
@@ -200,7 +195,6 @@
 #         return False
 
 
-
 # print(function_performance2(isElementIn,1,how_many_times = 500000))
 
 # #---------------------------------------------------------------------
@@ -210,8 +204,6 @@
 
 # print(count(2,4,1,2,4,5,10))
 # #------------------------------------
-
-
 
 
 # a = 4
@@ -281,9 +273,6 @@
 #     return a
 
 
-
-
-
 # def testCzasuFunkcji(func,arg):
 #     start = time.perf_counter()
 #     func(arg)
@@ -346,7 +335,6 @@
 # choseDirection = 0
 
 # print("Welcome in my game, You be serch a chest with gold. You have only 5 steps \n")
-
 
 
 # for move in range(gameLenght):
@@ -459,8 +447,6 @@
 #     print(file.read())
 
 
-
-
 # def openFileFunkcion():
 #     inputNameFile = input("Please write a name of file with you wanna read : ")
 #     try:
@@ -553,7 +539,6 @@
 # import json
 
 
-
 # def count_completed_tasks(tasks):
 #     tasksCompleted = dict()
 #     for entry in tasks:
@@ -571,9 +556,6 @@
 #         if score == maxCompletedTasks:
 #             topScoreUserId.append(userId)
 #     return topScoreUserId
-
-
-
 
 
 # webSite = requests.get("https://jsonplaceholder.typicode.com/todos")
@@ -648,4 +630,3 @@
 
 # print(generatedNumbers)
 
-print("sdsdsds")
