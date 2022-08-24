@@ -22,3 +22,9 @@
 
 
 #Task 3
+
+s = "Ala have a cat"
+s = s.replace(" ", "")
+print(s)
+s = s.count("")
+print(s)
