@@ -19,7 +19,7 @@ Instancja klasy - instancja  ang. egzemplarz to obiekt, który wyszedł z formy 
 """
 
 
-from traceback import print_tb
+
 
 
 class User:

@@ -630,3 +630,35 @@
 
 # print(generatedNumbers)
 
+
+##-------------------------------------------------------------------------------------------
+# ## Zabawa ze słownikami w liście 
+# userList =[
+
+#     {'key': 'user0', 'value': {'name': 'Gabriel', 'age': '33', 'height': '187'}},
+#     {'key': 'user1', 'value': {'name': 'Adi', 'age': '23', 'height': '181'}},
+#     {'key': 'user2', 'value': {'name': 'Mimi', 'age': '23', 'height': '167'}}
+# ]
+
+# print(userList[0]['key'])
+# print(userList[0]['value']['name'])
+
+# for dic in userList:
+#     user = dic['key']
+#     print(user)
+
+##-----------------------------------------------------------------------------------------
+# #Pętla do utworzenia użytkowników imie,wiek,wysokość.
+# i = 0
+# while i < 3:
+#     users = {}
+#     userName = input("Stwórz użytkownika, podaj imię: ")
+#     userAge = input("Podaj wiek użytkownika: ")
+#     userHeight = input("Podaj wzrost użytkownika: ")
+#     userInformation = {'name': userName, 'age': userAge, 'height': userHeight}
+#     userNumber = 'user' + str(i)
+#     userId = dict(key=userNumber, value=userInformation)
+#     userList.append(userId)
+#     i = i + 1
+
+# print(userList)
