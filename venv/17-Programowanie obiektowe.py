@@ -19,28 +19,29 @@ Instancja klasy - instancja  ang. egzemplarz to obiekt, który wyszedł z formy 
 """
 
 
+from traceback import print_tb
+
+
 class User:
-    age = 0,
-    height = 0,
+    age = 0
+    height = 0
+    name = ''
+
+    def print_age(self):
+        print('Imie:', self.name, 'wiek:', self.age, 'wzrost:', self.height)
 
 
-seba = User()
-seba.age = 16
-seba.height = 183
+userX = User()
+userX.age = 16
+userX.height = 183
+userX.name = 'Arek'
+userX.print_age()
 
-mirek = User()
-mirek.age = 24
-mirek.height = 179
+userY = User()
+userY.age = 24
+userY.height = 179
+userY.name = 'Mirek'
+userY.print_age()
 
 
-# seba.age = 16
-# seba.height = 183
-#
-# mirek.age = 24
-# mirek.height = 179
-
-print(seba.age)
-print(seba.height)
-print(mirek.age)
-print(mirek.height)
 
