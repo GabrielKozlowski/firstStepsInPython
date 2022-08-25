@@ -632,7 +632,7 @@
 
 
 ##-------------------------------------------------------------------------------------------
-# ## Zabawa ze słownikami w liście 
+# ## Zabawa ze słownikami w liście
 # userList =[
 
 #     {'key': 'user0', 'value': {'name': 'Gabriel', 'age': '33', 'height': '187'}},
