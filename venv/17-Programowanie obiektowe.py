@@ -49,30 +49,30 @@
 # """
 
 
-# class User:
+class User:
 
-#     def __init__(self, age, name):
-#         print(
-#             "jestem inicjalizatorem, ktury wywołuje się zawsze podczas onstrukcji obiektu")
-#         self.age = age
-#         self.name = name
+    def __init__(self, age, name):
+        print(
+            "jestem inicjalizatorem, ktury wywołuje się zawsze podczas onstrukcji obiektu")
+        self.age = age
+        self.name = name
 
-#         self.ageInFuture = age + 1
-
-
-
-#     def print_age(self, message):
-#         print(message, 'wiek: ', self.age, self.name)
+        self.ageInFuture = age + 1
 
 
-# user1 = User(30, 'Arek')
-# user2 = User(24, 'Mirek')
+
+    def print_age(self, message):
+        print(message, 'wiek: ', self.age, self.name)
 
 
-# user1.print_age("Dodatkowy tekst całkowicie inny")
-# user2.print_age("Dodatkowy tekst")
+user1 = User(30, 'Arek')
+user2 = User(24, 'Mirek')
 
 
-# print(user1.ageInFuture)
+user1.print_age("Dodatkowy tekst całkowicie inny")
+user2.print_age("Dodatkowy tekst")
 
-##--------------------------------------------------------------------------------------------
+
+print(user1.ageInFuture)
+
+#--------------------------------------------------------------------------------------------
