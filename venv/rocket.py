@@ -15,11 +15,17 @@ class Rocket:
 
 class RocketBoard:
     def __init__(self, amoundOfRockets=5):
-        rockets = [Rocket(randint(1, 6)) for _ in range(amoundOfRockets)]
+        self.rockets = [Rocket(randint(1, 6)) for _ in range(amoundOfRockets)]
 
         for _ in range(10):
-            numberOfRocket = randint(0, len(rockets) - 1)
-            rockets[numberOfRocket].moveUp()
+            numberOfRocket = randint(0, len(self.rockets) - 1)
+            self.rockets[numberOfRocket].moveUp()
 
-        for rocket in rockets:
+        for rocket in self.rockets:
             print(rocket)
+
+    def __getitem__(self, key):
+        return self.rockets[key]
+
+    def __setitem__(self, key, value):
+        self.rockets[key].altitude = value
