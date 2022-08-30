@@ -40,3 +40,8 @@ def get_how_many_days_have_passed_since_birth(day, month, year):
     passedDays = (timeToday - dateOfBirth)
     answer = print("Days have passed since birthday: ", passedDays)
     return answer
+
+
+get_how_many_days_have_passed_since_birth(30, 1, 1989)
+
+

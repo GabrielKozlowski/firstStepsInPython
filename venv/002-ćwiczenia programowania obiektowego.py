@@ -59,25 +59,49 @@
 #     print(rocket.height)
 # ##-----------------------------------------------------------------------
 #
-from random import randint
-class Rocket:
-
-    def __init__(self):
-
-        self.altitude = 0
-
-    def moveUp(self):
-
-        self.altitude += 1
-
-
-rockets = [Rocket() for _ in range(5)]
-
-for _ in range(10):
-    rocketIndexToMove = randint(0,4)
-    rockets[rocketIndexToMove].moveUp()
-
-for rocket in rockets:
-    print(rocket.altitude)
-
-
+# from random import randint
+# class Rocket:
+#
+#     def __init__(self):
+#
+#         self.altitude = 0
+#
+#     def moveUp(self):
+#
+#         self.altitude += 1
+#
+#
+# rockets = [Rocket() for _ in range(5)]
+#
+# for _ in range(10):
+#     rocketIndexToMove = randint(0,4)
+#     rockets[rocketIndexToMove].moveUp()
+#
+# for rocket in rockets:
+#     print(rocket.altitude)
+#
+# ##---------------------------------------------------------------
+# from random import randint
+#
+# class Rocket:
+#
+#     def __init__(self, speed):
+#
+#         self.altitude = 0
+#         self.speed = speed
+#
+#     def moveUp(self):
+#
+#         self.altitude += self.speed
+#
+# rocketSpeed = randint(10,50)
+# rockets = [Rocket(rocketSpeed) for _ in range(5)]
+#
+# for _ in range(10):
+#     numberOfRocket = randint(0,4)
+#     rockets[numberOfRocket].moveUp()
+#
+# for rocket in rockets:
+#     print(rocket.altitude)
+#
+# ##-------------------------------------------------------------------------
