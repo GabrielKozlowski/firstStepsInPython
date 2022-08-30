@@ -60,16 +60,18 @@
 #
 # ------------------------------------------------------------------------
 
-
-import requests
-import json
-
-r = requests.get("https://meowfacts.herokuapp.com/?count=5")
-
-
-try:
-    photo = r.json()
-except json.decoder.JSONDecodeError:
-    print("Bad format")
-else:
-    print(photo)
+#
+# import requests
+# import json
+#
+# r = requests.get("https://meowfacts.herokuapp.com/?count=5")
+#
+#
+# try:
+#     photo = r.json()
+# except json.decoder.JSONDecodeError:
+#     print("Bad format")
+# else:
+#     for fact in photo['data']:
+#         print('- ',fact)
+# ##-----------------------------------------------------------------------
