@@ -631,7 +631,7 @@
 # print(generatedNumbers)
 
 
-##-------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------
 # ## Zabawa ze słownikami w liście
 # userList =[
 
@@ -647,7 +647,7 @@
 #     user = dic['key']
 #     print(user)
 
-##-----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 # #Pętla do utworzenia użytkowników imie,wiek,wysokość.
 # i = 0
 # while i < 3:
@@ -662,7 +662,7 @@
 #     i = i + 1
 
 # print(userList)
-#--------------------------------------------------------
+# --------------------------------------------------------
 
 # class User:
 #     age = 0
@@ -684,3 +684,30 @@
 # userY.height = 179
 # userY.name = 'Mirek'
 # userY.print_age()
+
+from random import randint
+
+
+class Cars:
+
+    def __init__(self, speed):
+
+        self.position = 0
+        self.speed = speed
+
+    def positions(self):
+
+        self.position += self.speed
+
+    def __str__(self):
+        return "Car is on position " + str(self.position)
+
+
+cars = [Cars(randint(10, 50)) for _ in range(5)]
+
+for _ in range(10):
+    numberOfCars = randint(0, 4)
+    cars[numberOfCars].positions()
+
+for car in cars:
+    print(car)
