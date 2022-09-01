@@ -1,5 +1,6 @@
 from random import randint
 
+
 class Rocket:
 
     def __init__(self, speed):
@@ -12,6 +13,7 @@ class Rocket:
 
     def __str__(self):
         return "Rakieta jest aktualnie na wysokości " + str(self.altitude)
+
 
 class RocketBoard:
     def __init__(self, amoundOfRockets=5):
