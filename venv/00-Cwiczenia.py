@@ -724,6 +724,10 @@ from rocket import RocketBoard, Rocket
 rocket1 = Rocket(altitude=8, x=2)
 rocket2 = Rocket(altitude=2, x=5)
 
-
 print(RocketBoard.get_distance(rocket1, rocket2))
 
+
+board = RocketBoard(5)
+
+print(len(board))
+print(board.get_amount_of_rockets())

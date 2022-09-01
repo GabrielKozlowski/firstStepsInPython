@@ -1,3 +1,4 @@
+from ast import Str
 from random import randint
 from math import sqrt
 
@@ -18,6 +19,7 @@ class Rocket:
 
 
 class RocketBoard:
+
     def __init__(self, amoundOfRockets=5):
         self.rockets = [Rocket(randint(1, 6)) for _ in range(amoundOfRockets)]
 
@@ -39,3 +41,18 @@ class RocketBoard:
         ac = (rocket1.altitude - rocket2.altitude) ** 2
         ab = (rocket1.x - rocket2.x) ** 2
         return sqrt(ac + ab)
+
+    def get_amount_of_rockets(self):
+        return len(self.rockets)
+
+    def __len__(self):
+        return self.get_amount_of_rockets()
+
+
+class User:
+    nextId = 1
+
+    def __init__(self, name=''):
+        self.name = name
+        self.id = User.nextId
+        User.nextId += 1
