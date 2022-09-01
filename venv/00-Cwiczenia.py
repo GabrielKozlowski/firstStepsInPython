@@ -719,7 +719,10 @@
 #     print("Car", carNumber, cars[carNumber])
 
 # ##------------------------------------------------------------
+from rocket import RocketBoard, Rocket
+
+rocket1 = Rocket(altitude=8, x=2)
+rocket2 = Rocket(altitude=2, x=5)
 
 
-
-
+print(RocketBoard.get_distance(rocket1, rocket2))

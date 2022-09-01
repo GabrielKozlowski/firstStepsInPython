@@ -1,18 +1,22 @@
 from random import randint
+from math import sqrt
 
 
 class Rocket:
 
-    def __init__(self, speed):
-        self.altitude = 0
+    def __init__(self, speed=1, altitude=0, x=0):
+        self.altitude = altitude
 
         self.speed = speed
+        self.x = x
 
     def moveUp(self):
         self.altitude += self.speed
 
     def __str__(self):
         return "Rakieta jest aktualnie na wysokości " + str(self.altitude)
+
+
 
 
 class RocketBoard:
@@ -31,3 +35,9 @@ class RocketBoard:
 
     def __setitem__(self, key, value):
         self.rockets[key].altitude = value
+
+    @staticmethod
+    def get_distance(rocket1, rocket2):
+        ac = (rocket1.altitude - rocket2.altitude) ** 2
+        ab = (rocket1.x - rocket2.x) ** 2
+        return sqrt(ac + ab)
