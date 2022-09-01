@@ -12,11 +12,18 @@
 
 from bankaccount import Bankaccount
 
+# bank = Bankaccount()
+
+# bank.deposit(100)
+# bank.deposit(100)
+# bank.deposit(100)
+# print(Bankaccount.balance)
+# bank.withdraw(50)
+# print(Bankaccount.balance)
+
 bank = Bankaccount()
 
-bank.deposit(100)
-bank.deposit(100)
-bank.deposit(100)
-print(Bankaccount.balance)
-bank.withdraw(50)
-print(Bankaccount.balance)
+bank.deposit(500)
+bank.withdraw(200)
+
+print(bank)
