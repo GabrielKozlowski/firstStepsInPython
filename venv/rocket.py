@@ -4,7 +4,7 @@ from math import sqrt
 
 class Rocket:
 
-    def __init__(self, speed=1, altitude=0, x=0):
+    def __init__(self, speed: float = 1, altitude: float = 0, x: float = 0):
         self.altitude = altitude
 
         self.speed = speed
@@ -15,8 +15,6 @@ class Rocket:
 
     def __str__(self):
         return "Rakieta jest aktualnie na wysokości " + str(self.altitude)
-
-
 
 
 class RocketBoard:
@@ -37,7 +35,7 @@ class RocketBoard:
         self.rockets[key].altitude = value
 
     @staticmethod
-    def get_distance(rocket1, rocket2):
+    def get_distance(rocket1: Rocket, rocket2: Rocket) -> float:
         ac = (rocket1.altitude - rocket2.altitude) ** 2
         ab = (rocket1.x - rocket2.x) ** 2
         return sqrt(ac + ab)

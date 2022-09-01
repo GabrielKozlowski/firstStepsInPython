@@ -726,3 +726,4 @@ rocket2 = Rocket(altitude=2, x=5)
 
 
 print(RocketBoard.get_distance(rocket1, rocket2))
+
