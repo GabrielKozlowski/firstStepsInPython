@@ -3,7 +3,7 @@ class Result:
         self.isSuccess = None
         self.message = message
         self.value = value
-    
+
     def is_ok(self):
         return self.isSuccess
 
