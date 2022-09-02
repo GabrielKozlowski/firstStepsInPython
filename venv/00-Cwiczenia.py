@@ -719,15 +719,71 @@
 #     print("Car", carNumber, cars[carNumber])
 
 # ##------------------------------------------------------------
-from rocket import RocketBoard, Rocket
+# from rocket import RocketBoard, Rocket
 
-rocket1 = Rocket(altitude=8, x=2)
-rocket2 = Rocket(altitude=2, x=5)
+# rocket1 = Rocket(altitude=8, x=2)
+# rocket2 = Rocket(altitude=2, x=5)
 
-print(RocketBoard.get_distance(rocket1, rocket2))
+# print(RocketBoard.get_distance(rocket1, rocket2))
 
 
-board = RocketBoard(5)
+# board = RocketBoard(5)
 
-print(len(board))
-print(board.get_amount_of_rockets())
+# print(len(board))
+# print(board.get_amount_of_rockets())
+# #------------------------------------------------------------------
+
+
+# #Sup klasy korzystające z super klas
+# #klasy obliczają pole powierzchni i objętość
+
+
+class Ractangle():
+    def __init__(self, heigh, width):
+        self.heigh = heigh
+        self.width = width
+
+    def count_surface_area(self):
+        return self.heigh * self.width
+
+
+class Square(Ractangle):
+    def __init__(self, sideLength):
+        super().__init__(sideLength, sideLength)
+
+
+class Cube():
+    def __init__(self, square: Square):
+        self.square = square
+        self.height = square.heigh
+
+    def count_surface_area(self):
+        return self.square.count_surface_area() * 6
+
+    def count_volume(self):
+        return self.square.count_surface_area() * self.height
+
+
+class Cuboid():
+    def __init__(self, figure, heigh):
+        self.base = figure
+        self.heigh = heigh
+
+    def count_volume(self):
+        return self.base.count_surface_area() * self.heigh
+
+    def count_surface_area(self):
+        return 2 * self.base.count_surface_area() + 2 * self.base.width * self.heigh + 2 * self.base.heigh * self.heigh
+
+
+ract = Ractangle(5, 10)
+squa = Square(5)
+cube = Cube(Square(5))
+cuboid = Cuboid(Ractangle(2, 3), 4)
+
+print(squa.count_surface_area())
+print(ract.count_surface_area())
+print(cube.count_surface_area())
+print(cube.count_volume())
+print(cuboid.count_volume())
+print(cuboid.count_surface_area())
