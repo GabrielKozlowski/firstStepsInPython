@@ -7,23 +7,27 @@
 # print(board.rockets[0].altitude)
 # board[1] = 60
 # print(board[1])
-#------------------------------------------------
+# ------------------------------------------------
+
+# #------------------------------------------------------
+# from bankaccount import Bankaccount
+
+# bank = Bankaccount(500)
+
+# amoundToWitdraw = 700
+
+# result = bank.withdraw(amoundToWitdraw)
+
+# if (result.isSuccess):
+#     print(result.message)
+# else:
+#     print(result.message)
+# #---------------------------------------------------------
 
 
-from bankaccount import Bankaccount
+from bankaccount import MinimumBalanceAccount
 
-# bank = Bankaccount()
+accountMin = MinimumBalanceAccount(1500, 1000)
 
-# bank.deposit(100)
-# bank.deposit(100)
-# bank.deposit(100)
-# print(Bankaccount.balance)
-# bank.withdraw(50)
-# print(Bankaccount.balance)
-
-bank = Bankaccount()
-
-bank.deposit(500)
-bank.withdraw(200)
-
-print(bank)
+result = accountMin.withdraw(500)
+print(result.message)

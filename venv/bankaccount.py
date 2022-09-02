@@ -1,34 +1,31 @@
-# Zrobione po mojemu
-# class Bankaccount:
-#     balance = 0
+from result import Ok, Error
 
-#     def __init__(self):
-#         self.balance = Bankaccount.balance
-
-#     def deposit(self, money=0):
-#         self.money = money
-#         Bankaccount.balance += self.money
-
-#     def withdraw(self, money=0):
-#         self.money = money
-#         Bankaccount.balance -= self.money
-
-#     def __str__(self):
-#         return str(self.balance)
 
 class Bankaccount:
+    def __init__(self, balance=0):
+        self.balance = balance
 
-    def __init__(self):
-        self.balance = 0
+    def deposit(self, amount):
+        self.balance += amount
 
-    def deposit(self, amound):
-        self.balance += amound
+    def withdraw(self, amount):
+        if (self.balance > amount):
+            self.balance -= amount
+            return Ok("Tak wypłacono kasę", amount)
 
-    def withdraw(self, amound):
-        if self.balance > amound:
-            self.balance -= amound
-        else:
-            return "You're a bankrupt"
+        return Error("Nie wypłacono kasy", amount)
 
     def __str__(self):
         return str(self.balance)
+
+
+class MinimumBalanceAccount(Bankaccount):
+    def __init__(self, balance=0, minimumBalance=1000):
+        super().__init__(balance)
+        self.minimumBalance = minimumBalance
+
+    def withdraw(self, amount):
+        if (self.balance - amount >= self.minimumBalance):
+            return super().withdraw(amount)
+        else:
+            return Error("Nie udało się , próba przekroczenia progu", amount)
